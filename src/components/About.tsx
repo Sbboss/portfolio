@@ -27,8 +27,8 @@ const About = () => {
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             I'm passionate about building intelligent systems that bridge the gap between cutting-edge AI research 
-            and practical applications. Currently pursuing my Master's in AI at Northwestern University while 
-            actively seeking internship opportunities to build impactful AI tools.
+            and practical applications. <strong>Currently pursuing my Master's in AI at Northwestern University while 
+            actively seeking summer 2026 internship opportunities to build impactful AI tools.</strong>
           </p>
         </div>
 

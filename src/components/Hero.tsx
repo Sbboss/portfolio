@@ -10,9 +10,6 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Shiva Baghel
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Machine Learning & AI Intern | GenAI • CV • LLMs • MLOps
-          </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
             Graduate student in Artificial Intelligence at Northwestern University, passionate about building 
             intelligent systems that combine LLMs, multimodal models, and real-world applications.
