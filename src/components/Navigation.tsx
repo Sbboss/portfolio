@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,22 +15,18 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const location = useLocation();
+  
   const navItems = [
-    { label: "About", href: "#about" },
-    { label: "Education", href: "#education" },
-    { label: "Experience", href: "#experience" },
-    { label: "Projects", href: "#projects" },
-    { label: "Skills", href: "#skills" },
-    { label: "Contact", href: "#contact" }
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Education", href: "/education" },
+    { label: "Experience", href: "/experience" },
+    { label: "Projects", href: "/projects" },
+    { label: "Publications", href: "/publications" },
+    { label: "Skills", href: "/skills" },
+    { label: "Contact", href: "/contact" },
   ];
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-    setIsMenuOpen(false);
-  };
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -42,13 +39,17 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                to={item.href}
+                className={`transition-colors ${
+                  location.pathname === item.href 
+                    ? "text-primary font-medium" 
+                    : "text-muted-foreground hover:text-primary"
+                }`}
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -68,13 +69,18 @@ const Navigation = () => {
           <div className="md:hidden bg-background border-t">
             <div className="py-4 space-y-2">
               {navItems.map((item) => (
-                <button
+                <Link
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-2 text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                  to={item.href}
+                  className={`block w-full text-left px-4 py-2 transition-colors rounded-md ${
+                    location.pathname === item.href 
+                      ? "text-primary font-medium bg-secondary" 
+                      : "text-muted-foreground hover:text-primary hover:bg-secondary"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
