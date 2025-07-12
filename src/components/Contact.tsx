@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-bold mb-4">Let's Connect</h2>
           <p className="text-xl text-muted-foreground">
-            Looking for internship opportunities to build impactful AI tools
+            Seeking for summer 2026 internship opportunities to build impactful AI tools
           </p>
         </div>
 
@@ -63,7 +63,7 @@ const Contact = () => {
                   <div className="mt-8 p-4 bg-gradient-hero rounded-lg">
                     <h4 className="font-semibold mb-2">Open to Opportunities</h4>
                     <p className="text-sm text-muted-foreground">
-                      Currently seeking internship opportunities in AI/ML, GenAI, and MLOps. 
+                      Currently seeking summer 2026 internship opportunities in AI/ML, GenAI, and MLOps. 
                       Let's discuss how I can contribute to your team!
                     </p>
                   </div>
