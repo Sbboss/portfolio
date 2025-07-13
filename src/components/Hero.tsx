@@ -11,7 +11,7 @@ const Hero = () => {
             Shiva Baghel
           </h1>
           <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-            <strong>AI Grad Student @ Northwestern</strong>
+            <strong>AI Grad Student @ Northwestern University</strong>
           </p>
 
           {/* BUTTONS */}
