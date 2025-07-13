@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Linkedin, Github } from "lucide-react";
+import mediumLogo from "@/assets/medium.png"; // Make sure medium.png is in src/assets/
 
 const Contact = () => {
   return (
@@ -56,6 +57,12 @@ const Contact = () => {
                       <a href="https://github.com/Sbboss" target="_blank" rel="noopener noreferrer">
                         <Github className="mr-3 h-5 w-5" />
                         GitHub Portfolio
+                      </a>
+                    </Button>
+                    <Button variant="outline" className="w-full justify-start" asChild>
+                      <a href="https://medium.com/@shivabaghel203" target="_blank" rel="noopener noreferrer">
+                        <img src={mediumLogo} alt="Medium" className="mr-3 h-5 w-5 rounded" />
+                        Medium Profile
                       </a>
                     </Button>
                   </div>

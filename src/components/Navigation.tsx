@@ -53,7 +53,7 @@ const Navigation = () => {
       </Link>
     ))}
       <a
-        href="/resume.pdf"
+        href="https://drive.google.com/file/d/1gL8qMBsxHXHUUvOTAmv_Hy8Zi7hwnpyf/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         className="transition-colors text-muted-foreground hover:text-primary font-medium"

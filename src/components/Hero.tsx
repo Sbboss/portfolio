@@ -51,6 +51,9 @@ const Hero = () => {
             I’m a graduate student in Artificial Intelligence at Northwestern University with 4+ years of experience building GenAI systems, RAG-based tools, and vision-language pipelines. Passionate about applied research and building scalable, real-world AI. 
           </p>
           <p>Currently seeking <span className="text-blue-600 font-medium">AI/ML/MLE internships for Summer 2026</span>.</p>
+          <p className="text-sm mt-4 text-muted-foreground">
+  I occasionally write on AI, GenAI, and tech at <a href="https://medium.com/@shivabaghel203" className="underline text-blue-600 hover:text-blue-800" target="_blank">Medium</a>.
+</p>
 
           {/* SKILL TAGS */}
           <div className="flex flex-wrap justify-center gap-2 mt-4">
