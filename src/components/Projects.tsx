@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
-  const projects = [
-    ,
+  const projects = [ 
     {
       title: "VidQuery: Semantic Video Search & Recommendation System",
       description: "Built a semantic video retrieval system using RAG to return relevant clips and timestamps based on natural language queries over transcribed video content.",
@@ -16,16 +15,16 @@ const Projects = () => {
       technologies: ["RAG", "Semantic Search", "NLP", "Video Analytics", "Chatbot"],
       link: "#"
     },
-    {
-      title: "StatNano: Multimodal Engagement Prediction",
-      description: "Implemented a supervised learning framework to predict educational video effectiveness using multimodal features (audio, visual, motion), leveraging feature selection techniques, random forests and linear regression models.",
-      achievements: [
-        "Applied regression models, feature selection, and statistical validation to evaluate video effectiveness",
-        "Demonstrated strong foundations in statistics, probability, linear algebra, and model interpretability for supervised learning tasks"
-      ],
-      technologies: ["Supervised Learning", "Feature Selection", "Random Forests", "Linear Regression", "Statistical Modeling"],
-      link: "#"
-    },
+    // {
+    //   title: "StatNano: Multimodal Engagement Prediction",
+    //   description: "Implemented a supervised learning framework to predict educational video effectiveness using multimodal features (audio, visual, motion), leveraging feature selection techniques, random forests and linear regression models.",
+    //   achievements: [
+    //     "Applied regression models, feature selection, and statistical validation to evaluate video effectiveness",
+    //     "Demonstrated strong foundations in statistics, probability, linear algebra, and model interpretability for supervised learning tasks"
+    //   ],
+    //   technologies: ["Supervised Learning", "Feature Selection", "Random Forests", "Linear Regression", "Statistical Modeling"],
+    //   link: "#"
+    // },
     {
       title: "EduGen: Gen-AI Educational Video Generation",
       description: "Developed a multimodal GenAI video generator using Stable Diffusion for visuals and LLaMA 2 for language generation, automating the creation of personalized educational content using multimodal prompts.",
