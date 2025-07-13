@@ -53,7 +53,7 @@ const Contact = () => {
                       </a>
                     </Button>
                     <Button variant="outline" className="w-full justify-start" asChild>
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/Sbboss" target="_blank" rel="noopener noreferrer">
                         <Github className="mr-3 h-5 w-5" />
                         GitHub Portfolio
                       </a>

@@ -52,7 +52,6 @@ const Navigation = () => {
         {item.label}
       </Link>
     ))}
-    {location.pathname === "/" && (
       <a
         href="/resume.pdf"
         target="_blank"
@@ -61,7 +60,7 @@ const Navigation = () => {
       >
         Resume
       </a>
-    )}
+    
   </div>
 
   {/* Right: Mobile Menu Toggle */}
