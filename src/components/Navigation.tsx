@@ -18,51 +18,63 @@ const Navigation = () => {
   const location = useLocation();
   
   const navItems = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Education", href: "/education" },
-    { label: "Experience", href: "/experience" },
-    { label: "Projects", href: "/projects" },
-    { label: "Publications", href: "/publications" },
-    { label: "Skills", href: "/skills" },
-    { label: "Contact", href: "/contact" },
-  ];
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "Experience", href: "/experience" },
+  { label: "Publications", href: "/publications" },
+  { label: "Education", href: "/education" },
+  { label: "Skills", href: "/skills" },
+  { label: "Contact", href: "/contact" },
+];
+
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
     }`}>
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
-          <div className="text-xl font-bold text-primary">SB</div>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.label}
-                to={item.href}
-                className={`transition-colors ${
-                  location.pathname === item.href 
-                    ? "text-primary font-medium" 
-                    : "text-muted-foreground hover:text-primary"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+        <div className="relative flex items-center justify-between h-16">
+  {/* Left: Logo */}
+  <div className="text-xl font-bold text-primary">SB</div>
 
-          {/* Mobile Menu Toggle */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </Button>
-        </div>
+  {/* Center: Navigation Items */}
+  <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex space-x-8">
+    {navItems.map((item) => (
+      <Link
+        key={item.label}
+        to={item.href}
+        className={`transition-colors ${
+          location.pathname === item.href 
+            ? "text-primary font-medium" 
+            : "text-muted-foreground hover:text-primary"
+        }`}
+      >
+        {item.label}
+      </Link>
+    ))}
+    {location.pathname === "/" && (
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition-colors text-muted-foreground hover:text-primary font-medium"
+      >
+        Resume
+      </a>
+    )}
+  </div>
+
+  {/* Right: Mobile Menu Toggle */}
+  <Button
+    variant="ghost"
+    size="sm"
+    className="md:hidden"
+    onClick={() => setIsMenuOpen(!isMenuOpen)}
+  >
+    {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+  </Button>
+</div>
+
 
         {/* Mobile Navigation */}
         {isMenuOpen && (

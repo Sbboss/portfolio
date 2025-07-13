@@ -5,6 +5,17 @@ import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
   const projects = [
+    ,
+    {
+      title: "VidQuery: Semantic Video Search & Recommendation System",
+      description: "Built a semantic video retrieval system using RAG to return relevant clips and timestamps based on natural language queries over transcribed video content.",
+      achievements: [
+        "Prototyping a chat-based assistant for personalized, context-aware video recommendations",
+        "Enables automatic video segment sharing for collaborative learning and intelligent content discovery in educational environments"
+      ],
+      technologies: ["RAG", "Semantic Search", "NLP", "Video Analytics", "Chatbot"],
+      link: "#"
+    },
     {
       title: "StatNano: Multimodal Engagement Prediction",
       description: "Implemented a supervised learning framework to predict educational video effectiveness using multimodal features (audio, visual, motion), leveraging feature selection techniques, random forests and linear regression models.",
@@ -19,7 +30,7 @@ const Projects = () => {
       title: "EduGen: Gen-AI Educational Video Generation",
       description: "Developed a multimodal GenAI video generator using Stable Diffusion for visuals and LLaMA 2 for language generation, automating the creation of personalized educational content using multimodal prompts.",
       achievements: [
-        "Deployed on interactive demo on Streamlit, improving content production efficiency by 30%",
+        "Deployed interactive demo on Streamlit, improving content production efficiency by 30%",
         "Enabled rapid, user-driven generation of personalized learning materials"
       ],
       technologies: ["Stable Diffusion", "LLaMA 2", "Streamlit", "GenAI", "Multimodal AI"],
@@ -37,9 +48,13 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="shadow-card hover:shadow-primary transition-all duration-300 animate-scale-in h-full">
+            <Card
+              key={index}
+              className="shadow-card hover:shadow-primary transition-all duration-300 animate-scale-in h-full flex flex-col"
+              style={{ flex: "1 1 320px", maxWidth: "350px", minWidth: "280px" }}
+            >
               <CardHeader>
                 <CardTitle className="text-xl text-primary">{project.title}</CardTitle>
                 <p className="text-muted-foreground">{project.description}</p>
@@ -66,7 +81,7 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
-                <div className="flex gap-2 pt-2">
+                {/* <div className="flex gap-2 pt-2 mt-auto">
                   <Button size="sm" className="flex-1">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     View Project
@@ -74,7 +89,7 @@ const Projects = () => {
                   <Button variant="outline" size="sm">
                     <Github className="h-4 w-4" />
                   </Button>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           ))}
