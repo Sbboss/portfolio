@@ -53,7 +53,7 @@ const Navigation = () => {
       </Link>
     ))}
       <a
-        href="https://drive.google.com/file/d/1gL8qMBsxHXHUUvOTAmv_Hy8Zi7hwnpyf/view?usp=sharing"
+        href="https://drive.google.com/file/d/1MGyuInSA8yVGEp744ItppkFkSksSAtzr/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         className="transition-colors text-muted-foreground hover:text-primary font-medium"
