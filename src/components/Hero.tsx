@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="container mx-auto text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-2 bg-gradient-primary bg-clip-text text-transparent leading-[1.25] pb-3 overflow-visible">
-            Shiva Baghel
+            hi, i am Shiva Baghel 👋
           </h1>
           <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
             <strong>AI Grad Student @ Northwestern University</strong>
