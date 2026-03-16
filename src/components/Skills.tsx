@@ -1,28 +1,38 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Database, Cloud, Brain } from "lucide-react";
+import { Brain, Eye, Database, Cloud, Code } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      icon: Code,
-      title: "Programming Languages",
-      skills: ["Python", "C/C++", "JavaScript", "SQL"]
+      icon: Brain,
+      title: "LLM & Generative AI",
+      subtitle: "Production LLM systems and retrieval pipelines",
+      skills: ["LLMs", "RAG Pipelines", "LLM Evaluation", "Prompt Engineering", "LangChain", "Agentic AI", "Multimodal AI", "Stable Diffusion"]
     },
     {
-      icon: Brain,
-      title: "AI/ML Technologies",
-      skills: ["GenAI", "Agentic RAG", "LLMs", "Computer Vision", "Hugging Face", "Multimodal ML", "Quantization", "Multi-GPU Clusters", "PyTorch", "TensorFlow", "TensorRT", "Scikit-learn", "Langchain", "Statistical Modeling", "ETL"]
+      icon: Eye,
+      title: "Deep Learning & Computer Vision",
+      subtitle: "Model training, optimization, and visual understanding",
+      skills: ["PyTorch", "TensorFlow", "CNNs", "Transformers", "CLIP", "OpenCV", "TensorRT", "Quantization", "Multi-GPU Training"]
     },
     {
       icon: Database,
-      title: "Databases & Platforms",
-      skills: ["Vector DBs", "MySQL", "MongoDB", "AWS", "GCP", "Azure"]
+      title: "Data & Vector Systems",
+      subtitle: "Retrieval infrastructure and data engineering",
+      skills: ["Vector DBs", "FAISS", "Azure AI Search", "MySQL", "MongoDB", "Pandas", "Scikit-learn", "Statistical Modeling", "ETL"]
     },
     {
       icon: Cloud,
-      title: "MLOps & Tools",
-      skills: ["Docker", "Kubernetes", "FastAPI", "Streamlit", "Git", "MLOps", "Model Deployment", "GPU Optimization"]
+      title: "Cloud & Infrastructure",
+      subtitle: "Deployment, orchestration, and serving",
+      skills: ["AWS", "GCP", "Azure", "Docker", "Kubernetes", "FastAPI", "Streamlit", "Nginx", "WebSocket", "Git"]
+    },
+    {
+      icon: Code,
+      title: "Languages",
+      subtitle: "Core programming languages",
+      skills: ["Python", "C/C++", "JavaScript", "TypeScript", "SQL"]
     }
   ];
 
@@ -42,7 +52,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 mb-12">
           {skillCategories.map((category, index) => (
             <Card key={index} className="shadow-card hover:shadow-primary transition-all duration-300 animate-scale-in">
               <CardHeader className="pb-3">
@@ -50,7 +60,10 @@ const Skills = () => {
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <category.icon className="h-5 w-5 text-primary" />
                   </div>
-                  <CardTitle className="text-lg">{category.title}</CardTitle>
+                  <div>
+                    <CardTitle className="text-lg">{category.title}</CardTitle>
+                    <p className="text-xs text-muted-foreground mt-0.5">{category.subtitle}</p>
+                  </div>
                 </div>
               </CardHeader>
               <CardContent>
